@@ -1,53 +1,48 @@
 import React from 'react';
+// import BasecampImage from './basecamp.jpg'; // Import image for Basecamp location
+// import WharfImage from './wharf.jpg'; // Import image for Wharf location
 
-// Location component for the flagship location
-function FlagshipLocation() {
+function Locations() {
   return (
-    <div className="location">
-      <h2>Flagship Location</h2>
-      <p>
-        Nestled in the picturesque town on the Washington Coast, Cascadia Coffee Roasters brings you the finest coffee
-        beans from around the world. With a backdrop of Olympic National Park and the majestic Mt. Rainier in view,
-        our cozy cafe is the perfect place to relax and savor the beauty of the Pacific Northwest.
-      </p>
-      <p>
-        Located just 1.5 hours from Seattle, our small mountain-side town offers a tranquil escape from the hustle and
-        bustle of the city, making it an ideal destination for coffee enthusiasts and nature lovers alike.
-      </p>
-      <address>
-        Address: 123 Main St, Seattle, WA 98101
-      </address>
-    </div>
-  );
-}
+    <div className="about">
+      <div className="location-tile">
+        <img alt="Basecamp Location" />
+        <div className="location-details">
+          <h2>Cascadia Basecamp</h2>
+          <p>Established: 2018</p>
+          <h3>Address:</h3>
+          <p>123 Mountain View Drive, Evergreen, WA 98765</p>
+          <h3>Hours:</h3>
+          <ul>
+            <li>Monday to Friday: 6:30 AM - 5:00 PM</li>
+            <li>Saturday and Sunday: 7:00 AM - 4:00 PM</li>
+          </ul>
+          <p className="description">
+            Cascadia's Basecamp location is nestled in the heart of the picturesque mountain town of Evergreen, Washington. Established in 2018, this cozy coffee shop and roastery have quickly become a beloved hub for locals and visitors alike. Surrounded by lush evergreen forests and crisp mountain air, Cascadia Basecamp offers a warm and inviting atmosphere for those seeking the perfect cup of coffee.
+          </p>
+        </div>
+      </div>
 
-
-// Location component for the smaller market location
-function MarketLocation() {
-  return (
-    <div className="location">
-      <h2>Market Location</h2>
-      <p>
-        Visit our cozy coffee corner nestled in the local fish and produce market on the picturesque bay. Enjoy the aroma of freshly brewed coffee while exploring the market's offerings.
-      </p>
-      <address>
-        Address: 456 Dockside Ave, Bayville, WA 98002
-      </address>
-    </div>
-  );
-}
-
-// Locations page
-function LocationsPage() {
-  return (
-    <div className="locations-page">
-      <h1>Our Locations</h1>
-      <div className="locations-container">
-        <FlagshipLocation />
-        <MarketLocation />
+      <div className="location-tile">
+        <img alt="Wharf Location" />
+        <div className="location-details">
+          <h2>Cascadia Wharf</h2>
+          <p>Established: 2018</p>
+          <h3>Address:</h3>
+          <p>456 Dockside Lane, Seabreeze, WA 98766</p>
+          <h3>Hours:</h3>
+          <ul>
+            <li>Monday to Friday: 7:00 AM - 3:00 PM</li>
+            <li>Saturday: 8:00 AM - 2:00 PM</li>
+            <li>Closed on Sundays</li>
+          </ul>
+          <p className="description">
+            Cascadia's Wharf location, established in 2018, is a hidden gem nestled in the reclaimed Wharf area of Seabreeze, Washington. Situated along the rugged coastline of the Pacific Ocean, this smaller but charming café offers a unique maritime experience for coffee enthusiasts.
+          </p>
+        </div>
       </div>
     </div>
   );
 }
 
-export default LocationsPage;
+export default Locations;

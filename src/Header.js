@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 function Header() {
   return (
@@ -8,28 +10,31 @@ function Header() {
       <div className="left-links">
         <div className="header-link">
         <Link to="/" className="link-title">
-          home
+          Home
         </Link>
         </div>
         <div className="header-link">
-          <Link to="/shop" className='link-title'>shop</Link>
+          <Link to="/shop" className='link-title'>Shop</Link>
           <div className="dropdown-content">
-            <Link to="/shop/products" className='link-title'>Products</Link>
-            <Link to="/shop/categories" className='link-title'>Categories</Link>
+            <Link to="/Coffee" className='link-title'>Coffee</Link>
+            <Link to="/equipment" className='link-title'>Brewing Equipment</Link>
+            <Link to="/merch" className='link-title'>Merch</Link>
           </div>
         </div>
         <div className="header-link">
-          <Link to="/learn" className='link-title'>learn</Link>
+          <Link to="/learn" className='link-title'>Learn</Link>
           <div className="dropdown-content">
-            <Link to="/learn/articles" className='link-title'>Articles</Link>
-            <Link to="/learn/tutorials" className='link-title'>Tutorials</Link>
+            <Link to="/about" className='link-title'>About Us</Link>
+            <Link to="/Guides" className='link-title'>Brewing Guides</Link>
+            <Link to="/classes" className='link-title'>Coffee Classes</Link>
+            <Link to="/contact" className='link-title'>Contact Us</Link>
           </div>
         </div>
         <div className="header-link">
-          <Link to="/locations" className='link-title'>locations</Link>
+          <Link to="/locations" className='link-title'>Locations</Link>
           <div className="dropdown-content">
-            <Link to="/locations/store1" className='link-title'>Store 1</Link>
-            <Link to="/locations/store2" className='link-title'>Store 2</Link>
+            <Link to="/Basecamp" className='link-title'>Basecamp</Link>
+            <Link to="/thewharf" className='link-title'>The Wharf</Link>
           </div>
         </div>
       </div>
@@ -42,12 +47,12 @@ function Header() {
 
       <div className="right-links">
         <div className="header-link">
-        <Link to="/account" className='link-title'>account</Link>
+        <Link to="/account" className='link-title'>Account</Link>
         </div>
         <div className='header-link'>
         <Link to="/cart" className="link-title">
-          cart
-        </Link>
+            <FontAwesomeIcon icon={faShoppingCart} /> Cart {/* Shopping Cart Icon */}
+          </Link>
         </div>
       </div>
     </header>
