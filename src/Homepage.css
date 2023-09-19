@@ -1,0 +1,49 @@
+/* Homepage.css */
+.home-page {
+    background-image: url('./image-files/nathan-dumlao-50EIN987o9U-unsplash.jpg');
+    background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center -40vh; /* Adjust the vertical position to trim the top */
+  background-attachment: fixed;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  }
+
+  
+  
+  .main-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff; /* Adjust text color */
+    margin-bottom: 16px;
+  }
+  
+  .sub-title {
+    font-size: 18px;
+    color: #fff; /* Adjust text color */
+    margin-bottom: 32px;
+  }
+  
+  .navigation-links {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .navigation-links a {
+    text-decoration: none;
+    color: #fff; /* Adjust link text color */
+    font-size: 24px;
+    padding: 10px 20px;
+    border: 2px solid #fff; /* Add a border to the links */
+    border-radius: 8px; /* Rounded corners for the links */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition effects */
+  }
+  
+  .navigation-links a:hover {
+    background-color: #fff; /* Background color on hover */
+    color: #000; /* Text color on hover */
+  }
