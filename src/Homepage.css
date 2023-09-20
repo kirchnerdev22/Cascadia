@@ -1,9 +1,12 @@
 /* Homepage.css */
+
+
 .home-page {
-    background-image: url('./image-files/nathan-dumlao-50EIN987o9U-unsplash.jpg');
-    background-size: cover;
+  background-image: url('./image-files/nathan-dumlao-50EIN987o9U-unsplash.jpg');
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center -40vh; /* Adjust the vertical position to trim the top */
+  background-position: center -40vh;
+  /* Adjust the vertical position to trim the top */
   background-attachment: fixed;
   height: 60vh;
   display: flex;
@@ -11,39 +14,175 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  }
+}
 
-  
-  
-  .main-title {
-    font-size: 36px;
-    font-weight: bold;
-    color: #fff; /* Adjust text color */
-    margin-bottom: 16px;
-  }
-  
-  .sub-title {
-    font-size: 18px;
-    color: #fff; /* Adjust text color */
-    margin-bottom: 32px;
-  }
-  
-  .navigation-links {
-    display: flex;
-    gap: 16px;
-  }
-  
-  .navigation-links a {
-    text-decoration: none;
-    color: #fff; /* Adjust link text color */
-    font-size: 24px;
-    padding: 10px 20px;
-    border: 2px solid #fff; /* Add a border to the links */
-    border-radius: 8px; /* Rounded corners for the links */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition effects */
-  }
-  
-  .navigation-links a:hover {
-    background-color: #fff; /* Background color on hover */
-    color: #000; /* Text color on hover */
-  }
+.main-title {
+  font-size: 50px;
+  font-weight: bold;
+  color: #fff;
+  /* Adjust text color */
+  margin-bottom: 16px;
+}
+
+.sub-title {
+  font-size: 18px;
+  color: #fff;
+  /* Adjust text color */
+  margin-bottom: 32px;
+}
+
+.navigation-links {
+  display: flex;
+  gap: 16px;
+}
+
+.navigation-links a {
+  text-decoration: none;
+  color: #fff;
+  /* Adjust link text color */
+  font-size: 24px;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  /* Add a border to the links */
+  border-radius: 8px;
+  /* Rounded corners for the links */
+  transition: background-color 0.3s, color 0.3s;
+  /* Smooth transition effects */
+}
+
+.navigation-links a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.grid-area {
+  padding: 4% 8%;
+}
+
+.tile-container {
+  display: grid;
+  grid-auto-columns: minmax(100px, auto);
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 1em;
+  justify-items: stretch;
+  align-items: stretch;
+  font-size: xx-large;
+}
+
+.tile-container .a {
+  transition: transform 0.3s ease-in-out;
+  padding: 5%;
+}
+
+.large-tile:hover,
+.medium-tile:hover,
+.small-tile-one:hover,
+.small-tile-two:hover {
+  transform: translateY(-10px);
+  /* Adjust the value to control the bump-up effect */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  /* Optional: Add a subtle shadow */
+}
+
+.large-tile {
+  background-color: #333;
+  grid-column: 1/3;
+  grid-row: 1/7;
+  border-radius: 25px;
+
+}
+
+.medium-tile {
+  background-color: #333;
+  grid-column: 3/5;
+  grid-row: 1/4;
+  border-radius: 25px;
+}
+
+.small-tile-one {
+  background-color: #333;
+  grid-column: 3/4;
+  grid-row: 4/7;
+  border-radius: 25px;
+}
+
+.small-tile-two {
+  background-color: #333;
+  grid-column: 4/5;
+  grid-row: 4/7;
+  border-radius: 25px;
+}
+
+.coffee-display {
+  padding: 4% 8%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* Create three equally sized columns */
+  grid-gap: 2em;
+  justify-items: stretch;
+  align-items: stretch;
+  font-size: xx-large;
+}
+
+.coffee-tile {
+  background-color: #333;
+  border-radius: 25px;
+  padding: 5%;
+  color: #fff;
+  height: 300px;
+}
+
+.who-we-are {
+  padding: 4% 8%;
+  background-image: url('./image-files/joanna-kosinska-BIYoKb7Lux0-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center -60vh;
+  /* Adjust the vertical position to trim the top */
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  filter: grayscale(100%);
+}
+
+.who-we-are h2 {
+  text-align: center;
+  font-size: 48px;
+  color: white;
+}
+
+.who-we-are p{
+  width: 80%;
+  font-size: 30px;
+  margin: 2%;
+  color: white;
+}
+
+.who-we-are div{
+  font-size: 24px;
+  color: #000;
+  border-radius: 5px;
+}
+
+.equipment-display {
+  padding: 4% 8%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* Create three equally sized columns */
+  grid-gap: 2em;
+  justify-items: stretch;
+  align-items: stretch;
+  font-size: xx-large;
+  margin: 4% 0%;
+}
+
+.equipment-tile {
+  background-color: #333;
+  border-radius: 25px;
+  padding: 5%;
+  color: #fff;
+  height: 300px;
+}
