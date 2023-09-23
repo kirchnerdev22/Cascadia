@@ -1,5 +1,8 @@
 import React from 'react';
 import CoffeeBeans from './CoffeeBean'; // Import the coffee beans data
+import EthiopiaImage from "./image-files/Ethiopia.png";
+import KonaImage from "./image-files/Kona.png";
+import SupremoImage from "./image-files/Supremo.png";
 import equipmentData from './EquipmentGear';
 import './Homepage.css';
 import { Link } from 'react-router-dom';
@@ -39,13 +42,19 @@ function HomePage() {
         </div>
       </div>
 
-      <div className='coffee-display'>
-        {/* Render three divs for the first three coffee beans */}
-        {coffeeBeansForHomepage.map((bean) => (
-          <div className="coffee-tile" key={bean.id}>
-            <h2>{bean.name}</h2>
-          </div>
-        ))}
+      <div>
+        <h2 className='coffee-display-title'>Shop our best sellers</h2>
+        <div className='coffee-display'>
+
+          {/* Render three divs for the first three coffee beans */}
+          {coffeeBeansForHomepage.map((bean) => (
+            <div className="coffee-tile" key={bean.id}>
+              {bean.name === "Ethiopian Yirgacheffe" && <img src={EthiopiaImage} alt={`${bean.name} `} />}
+              {bean.name === "Hawaiian Kona" && <img src={KonaImage} alt={`${bean.name} `} />}
+              {bean.name === "Colombian Supremo" && <img src={SupremoImage} alt={`${bean.name} `} />}
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className='who-we-are'>
@@ -62,6 +71,7 @@ function HomePage() {
         {equipmentForHomepage.map((item) => (
           <div className="equipment-tile" key={item.id}>
             <h2>{item.name}</h2>
+
           </div>
         ))}
       </div>

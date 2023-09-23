@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-
+import EthiopiaImage from "./image-files/Ethiopia.png";
+import KonaImage from "./image-files/Kona.png";
+import SupremoImage from "./image-files/Supremo.png";
 import CoffeeBeans from "./CoffeeBean";
 
 function Coffee() {
@@ -43,8 +45,10 @@ function Coffee() {
             <p><strong>Origin:</strong> {bean.origin}</p>
             <p><strong>Roast Level:</strong> {bean.roastLevel}</p>
             <p><strong>Flavor Notes:</strong> {bean.flavorNotes}</p>
-            <button className="add-to-cart">Add to Cart</button>
-          </div>
+            {bean.name === "Ethiopian Yirgacheffe" && <img src={EthiopiaImage} alt={`${bean.name} `} />}
+            {bean.name === "Hawaiian Kona" && <img src={KonaImage} alt={`${bean.name} `} />}
+            {bean.name === "Colombian Supremo" && <img src={SupremoImage} alt={`${bean.name} `} />}
+            <button className="add-to-cart">Add to Cart</button>          </div>
         ))}
       </div>
 
